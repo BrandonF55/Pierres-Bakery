@@ -32,7 +32,6 @@ namespace PierresBakery.TestsTools
     }
 
    }
-
       [TestClass]
       public class PasteryTests
       {
