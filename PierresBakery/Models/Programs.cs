@@ -9,27 +9,29 @@ namespace PierresBakery.Program
     {
         public static void Main()
         {
-            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.WriteLine("Welcome To Pierre's Baked Goods!");
-            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            Console.WriteLine("We Have Bread And Pastries Available Today!:");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("We Have Freshly Baked Bread And Pastries Available Today!:");
             Console.WriteLine("Bread: A Single Loaf Cost $5! Buy Two, Get One Free!");
             Console.WriteLine("Pastries: Buy One For $2 Or Three For $5.");
-            // Console.WriteLine("Would you like to place a order? [Y/y for YES; Press Enter for No]");
-            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("Would you like to place a order? [Y/y for YES; Press Enter for No]");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             TryAgain();
 
 
           static void TryAgain()  
             {
 
-            Console.WriteLine("Would You Like To Place a Order? [Y/y for YES; Press Enter For No]");
             string userInputOrder = Console.ReadLine().ToUpper();
             if (userInputOrder == "Y")
             {
                 int cost = 0;
-                Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                
                 Console.WriteLine("How Many Loafs Of Bread Would You Like?:");
+                Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 int loafsWanted = int.Parse(Console.ReadLine());
                 Console.WriteLine("How Many Pastries Would You Like To Purchase?:");
                 Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -51,6 +53,7 @@ namespace PierresBakery.Program
                     Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                     Console.WriteLine("Your Order Is: ");
                     Console.WriteLine($" Bread: {loafsWanted}, Pastries {pastriesWanted}");
+                    Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                     Console.WriteLine($" Your Order Total Is: {cost}");
                     Console.WriteLine("Please Enter Your Payment: ");
                     Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -59,11 +62,13 @@ namespace PierresBakery.Program
                     
                     if(paymentResponse == cost)
                     {
-                        Console.WriteLine("Thank You For Shopping With Us!");
+                        Console.WriteLine("Thank You For Shopping With Us. I hope You Enjoy Your Freshly Baked Goods!");
+                        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                     }
                     else 
                     {
-                        Console.Write("My Apologies, But That Response Was Not Valid Please Try Again.");
+                        Console.WriteLine("My Apologies, But That Response You Entered Was Not Valid, Please Try Again.");
+                        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                         TryAgain();
                     }
 
