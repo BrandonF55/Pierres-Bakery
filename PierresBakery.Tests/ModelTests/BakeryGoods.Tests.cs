@@ -24,7 +24,29 @@ namespace PierresBakery.TestsTools
         Assert.AreEqual(Counter, loafs.Counter);
 
       }
-    
+      public void BreadConstructor_ReturnsPriceOfBread_Bread()
+      {
+      int Price = 5;
+      Bread loafs = new Bread(1);
+      Assert.AreEqual(Price, loafs.Price);
+    }
 
    }
+
+      [TestClass]
+      public class PasteryTests
+      {
+
+        [TestMethod]
+        public void PasteryConstructor_CreatesInstaceOfPastery_Pastry()
+        {
+          Pastery item = new Pastery(1);
+          Assert.AreEqual(typeof(Pastery), item.GetType());
+
+        }
+    
+
+        }
+
+
 }
