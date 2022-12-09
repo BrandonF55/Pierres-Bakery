@@ -12,18 +12,19 @@ namespace PierresBakery.Program
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.WriteLine("Welcome To Pierre's Baked Goods!");
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            Console.WriteLine("We have Bread and Pastries available today!: ");
-            Console.WriteLine("Bread: A single loaf cost $5. Buy 2, get 1 free!");
+            Console.WriteLine("We have Bread and Pastries available today!:");
+            Console.WriteLine("Bread: A single loaf cost $5! Buy 2, get 1 free!");
             Console.WriteLine("Pastries: Buy 1 for $2 or 3 for $5.");
             // Console.WriteLine("Would you like to place a order? [Y/y for YES; Press Enter for No]");
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            TryAgain();
 
 
           static void TryAgain()  
-          
-                {
+            {
+
             Console.WriteLine("Would you like to place a order? [Y/y for YES; Press Enter for No]");
-            string userInputOrder = Console.WriteLine();//.ToUpper();
+            string userInputOrder = Console.ReadLine().ToUpper();
             if (userInputOrder == "Y")
             {
                 int cost = 0;
@@ -47,11 +48,12 @@ namespace PierresBakery.Program
                     {
                         cost -= (item.Counter/3);
                     }
-
+                    Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                     Console.WriteLine("Your order is: ");
                     Console.WriteLine($" Bread: {loafsWanted}, Pastries {pastriesWanted}");
                     Console.WriteLine($" Your Order Total is: {cost}");
                     Console.WriteLine("Please enter your Payment: ");
+                    Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
                     int paymentResponse = int.Parse(Console.ReadLine());
                     
@@ -71,9 +73,6 @@ namespace PierresBakery.Program
                 }
 
             }
-
-
-
 
         }
     }
