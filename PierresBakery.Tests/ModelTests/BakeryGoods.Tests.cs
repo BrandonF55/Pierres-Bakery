@@ -48,8 +48,16 @@ namespace PierresBakery.TestsTools
         public void PasteryConstructor_CreatesCountOfPastery_Pastry()
         {
           int Counter = 1;
-          Pastery item = new Pastery(1);
+          Pastery item = new Pastery(Counter);
           Assert.AreEqual(Counter, item.Counter);
+        }
+
+        [TestMethod]
+        public void PasteryConstructor_ReturnsPriceOfPastery_Pastry()
+        {
+          int Price = 2;
+          Pastery item = new Pastery(1);
+          Assert.AreEqual(Price, item.Price);
         }
     
 
