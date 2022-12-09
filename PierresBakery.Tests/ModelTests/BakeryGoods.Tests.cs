@@ -42,7 +42,14 @@ namespace PierresBakery.TestsTools
         {
           Pastery item = new Pastery(1);
           Assert.AreEqual(typeof(Pastery), item.GetType());
+        }
 
+        [TestMethod] 
+        public void PasteryConstructor_CreatesCountOfPastery_Pastry()
+        {
+          int Counter = 1;
+          Pastery item = new Pastery(1);
+          Assert.AreEqual(Counter, item.Counter);
         }
     
 
