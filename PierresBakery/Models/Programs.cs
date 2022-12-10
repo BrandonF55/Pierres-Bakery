@@ -15,7 +15,8 @@ namespace PierresBakery.Program
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             Console.WriteLine("We Have Freshly Baked Bread And Pastries Available Today!:");
-            Console.WriteLine("Bread: A Single Loaf Cost $5! Buy Two, Get One Free!");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Console.WriteLine("Bread: A Single Loaf Cost $5! Buy Two, Get One Free!\n");
             Console.WriteLine("Pastries: Buy One For $2 Or Three For $5.");
             Console.WriteLine("Would you like to place a order? [Y/y for YES; Press Enter for No]");
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
