@@ -107,7 +107,6 @@ public class OrderTests : IDisposable
     string Date = "october 30th 2022";
     Order newOrder = new Order(Item, Amount, Price, Date);
     List<Order> newList = new List<Order> { newOrder };
-
     string name = "Brandon's Bakery";
     string description = "first in sandy";
     Vendor newVendor = new Vendor(name, description);
