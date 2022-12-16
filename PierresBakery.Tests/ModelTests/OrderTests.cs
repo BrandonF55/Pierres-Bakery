@@ -22,6 +22,23 @@ public class OrderTests : IDisposable
     Assert.AreEqual(typeof(Order), newOrder.GetType());
   }
 
+  [TestMethod]
+  public void OrderItem_ReturnsOrdersItem_string()
+  {
+    string Item = "Bread";
+    string Amount = "69 loafs";
+    string Price = "$55";
+    string Date = "october";
+    Order newOrder = new Order(Item, Amount, Price, Date);
+    string ItemCheck = newOrder.Item;
+    Assert.AreEqual(ItemCheck, Item);
+  }
+
+  
+
+
+
+
 
 }
 }
