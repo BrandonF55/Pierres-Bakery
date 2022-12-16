@@ -45,7 +45,18 @@ public class OrderTests : IDisposable
     string amountCheck = newOrder.Amount;
     Assert.AreEqual(amountCheck, Amount);
   }
-
+  
+   [TestMethod]
+  public void OrderPrice_ReturnsOrderPrice_string()
+  {
+    string Item = "Bread";
+    string Amount = "69 loafs";
+    string Price = "$55";
+    string Date = "october 30th 2022";
+    Order newOrder = new Order(Item, Amount, Price, Date);
+    string priceCheck = newOrder.Price;
+    Assert.AreEqual(priceCheck, Price);
+  }
 
 
 
