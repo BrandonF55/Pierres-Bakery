@@ -87,6 +87,19 @@ public class OrderTests : IDisposable
     Assert.AreNotEqual(orderOne, orderTwo);
   }
 
+  [TestMethod]
+  public void AssignId_AssignAndCheckOrderId_int()
+  {
+    string Item = "Bread";
+    string Amount = "69 loafs";
+    string Price = "$55";
+    string Date = "october 30th 2022";
+    Order newOrder = new Order(Item, Amount, Price, Date);
+    int results = newOrder.Id;
+    Assert.AreEqual(results, newOrder.Id);
+  }
+
+
 
 
 }
