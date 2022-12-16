@@ -59,6 +59,19 @@ public class OrderTests : IDisposable
   }
 
 
+   [TestMethod]
+  public void Orderdate_ReturnsOrderdate_string()
+  {
+    string Item = "Bread";
+    string Amount = "69 loafs";
+    string Price = "$55";
+    string Date = "october 30th 2022";
+    Order newOrder = new Order(Item, Amount, Price, Date);
+    string dateCheck = newOrder.Date;
+    Assert.AreEqual(dateCheck, Date);
+  }
+
+
 
 
 }
