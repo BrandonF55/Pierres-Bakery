@@ -23,10 +23,19 @@ namespace PierresBakery.Test
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
+      [TestMethod]
+      public void VendorLocation_ReturnsVendorLocation_string()
+      {
+      string name = "Brandon's Bakery";
+      string location = "first in sandy";
+      Vendor newVendor = new Vendor(Name, location);
+      string locationCheck = newVendor.location;
+      Assert.AreEqual(locationCheck, location);
 
-      // string name = " Brandon's Bakery";
-      // string location = "first in sandy"
-      // Vendor newVendor = new Vendor(name, location)
+
+      }
+
+      
 
   }
 }

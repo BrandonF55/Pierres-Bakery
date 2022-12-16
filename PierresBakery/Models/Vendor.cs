@@ -12,10 +12,10 @@ namespace PierresBakery.Models
     public int Id { get; }
     public List <Order> Orders { get; set; }
 
-    public Vendor(string vendorName, string VendorLocation)
+    public Vendor(string vendorName, string vendorLocation)
     {
       Name = vendorName;
-      Location = VendorLocation;
+      Location = vendorLocation;
       _instances.Add(this);
       Orders = new List<Order>{};
     }
