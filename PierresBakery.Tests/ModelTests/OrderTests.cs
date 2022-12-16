@@ -71,6 +71,21 @@ public class OrderTests : IDisposable
     Assert.AreEqual(dateCheck, Date);
   }
 
+  [TestMethod]
+  public void OrderConstructor_SaveMultipleOrdersAndReturnsOneOrder_String()
+  {
+    string itemOne = "Bread";
+    string amountOne = "20 loeafs";
+    string priceOne = "69 loafs";
+    string dateOne = "october 30th 2022";
+    string itemTwo = "donut";
+    string amountTwo = "40 dozen";
+    string priceTwo = "$40";
+    string dateTwo = "october 3rd";
+    Order orderOne = new Order (itemOne, amountOne, priceOne, dateOne);
+    Order orderTwo = new Order (itemTwo, amountTwo, priceTwo, dateTwo);
+    Assert.AreNotEqual(orderOne, orderTwo);
+  }
 
 
 
