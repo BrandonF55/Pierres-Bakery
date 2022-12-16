@@ -11,7 +11,7 @@ public class OrderTests : IDisposable
 {
   public void Dispose()
   {
-    // Order.ClearAll();
+    Order.ClearAll();
   }
 
 
@@ -98,6 +98,23 @@ public class OrderTests : IDisposable
     int results = newOrder.Id;
     Assert.AreEqual(results, newOrder.Id);
   }
+  [TestMethod]
+  public void AddOrder_AssociatesOrderWithVendor_OrderList()
+  {
+    string Item = "Bread";
+    string Amount = "69 loafs";
+    string Price = "$55";
+    string Date = "october 30th 2022";
+    Order newOrder = new Order(Item, Amount, Price, Date);
+    List<Order> newList = new List<Order> { newOrder };
+    string name = "Brandon's Bakery";
+    string description = "first in sandy";
+    Vendor newVendor = new Vendor(name, description);
+    newVendor.AddOrder(newOrder);
+    List<Order> result = newVendor.Orders;
+    CollectionAssert.AreEqual(newList, result);
+  }
+
 
 
 
