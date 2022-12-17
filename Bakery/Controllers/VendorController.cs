@@ -1,26 +1,26 @@
 using System.Collections.Generic;
-using System;
 using Microsoft.AspNetCore.Mvc;
-using PierresBakery.Models;
+using Bakery.Models;
 
-namespace PierresBakery.Controllers
+namespace Bakery.Controllers
 {
 
   public class VendorController : Controller
   {
 
-    [HttpGet("/vendors")]
-    public ActionResults Index()
+     [HttpGet("/vendors")]
+    public ActionResult Index()
     {
       List<Vendor> allVendors = Vendor.GetAll();
-      return View(allvendors);
+      return View(allVendors);
     }
 
-    [HttpGet("vendor/new")]
-    public ActionResults new()
+  [HttpGet("/vendors/new")]
+    public ActionResult New()
     {
-      return View():
+      return View();
     }
+
 
      [HttpPost("/vendors")]
     public ActionResult Create(string vendorName, string vendorLocation)
@@ -39,20 +39,20 @@ namespace PierresBakery.Controllers
       model.Add("orders", vendorOrders);
       return View(model);
     }
-
-    [HttpPost("/vendors/{vendorId/orders}")]
+ [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult Create(int vendorId, string orderItem, string orderAmount, string orderPrice, string orderDate)
     {
-      Dicionary<string, object> model = new Dicionary<string, object>();
+      Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
       Order newOrder = new Order(orderItem, orderAmount, orderPrice, orderDate);
       foundVendor.AddOrder(newOrder);
-      List<Order> vendorOrder = foundVendor.Orders;
-      model.Add("orders", vendorOrder);
-      modle.Add("vendor", foundVendor);
-      return View("show", model);
-
+      List<Order> vendorOrders = foundVendor.Orders;
+      model.Add("orders", vendorOrders);
+      model.Add("vendor", foundVendor);
+      return View("Show", model);
     }
+
   }
 }
+
 

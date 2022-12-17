@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PierresBakery.Models;
+using Bakery.Models;
 using System.Collections.Generic;
 using System;
 
-namespace PierresBakery.Test
+namespace Bakery.Test
 {
 
 

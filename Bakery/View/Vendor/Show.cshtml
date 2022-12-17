@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  @using Bakery.Models;
+
+  <h1> Pierre Bakery - OrderList</h1>
+ <div class="form">
+      <ul>
+      @foreach (Order order in @Model["orders"])
+      {
+        <div class="listItem">
+          <p>@order.Item</p>
+          <li>@order.Amount</li>
+          <li>@order.Price</li>
+          <li>@order.Date</li>
+        </div>
+      }
+      </ul>
+      <a href='/vendors/@Model["vendor"].Id/orders/new'>
+      <button type="submit"> add Order</button>
+      <a href="/vendors">
+      <button type="submit"> view vendors</button>
+      </a>
+      <a href="/">
+      <button type="submit"> back home</button>
+      </a>
+      </div>
+       </body>
+</html>
+      

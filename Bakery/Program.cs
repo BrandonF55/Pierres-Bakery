@@ -1,11 +1,11 @@
 using System;
-using PierresBakery.Models;
+using Bakery.Models;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace PierresBakery.Program
+namespace Bakery.Program
 {
   class Program
   {

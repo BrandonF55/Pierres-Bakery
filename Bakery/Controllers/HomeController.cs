@@ -1,6 +1,6 @@
-using Microsoft.Aspusing Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
-namespace PierresBakery.Controller
+namespace Bakery.Controllers
 {
 
 

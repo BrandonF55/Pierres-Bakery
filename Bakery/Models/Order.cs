@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace PierresBakery.Models
+namespace Bakery.Models
 {
 
 public class Order
