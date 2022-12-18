@@ -4,6 +4,7 @@ namespace Bakery.Controllers
 {
 
 
+
   public class HomeController : Controller
   {
 
@@ -12,5 +13,6 @@ namespace Bakery.Controllers
     {
       return View();
     }
+
   }
 }

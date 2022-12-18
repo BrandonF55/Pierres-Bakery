@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Bakery.Models;
+using System;
 
 namespace Bakery.Controllers
 {
@@ -8,21 +9,20 @@ namespace Bakery.Controllers
   public class VendorController : Controller
   {
 
-     [HttpGet("/vendors")]
+    [HttpGet("/vendors")]
     public ActionResult Index()
     {
       List<Vendor> allVendors = Vendor.GetAll();
       return View(allVendors);
     }
 
-  [HttpGet("/vendors/new")]
+    [HttpGet("/vendors/new")]
     public ActionResult New()
     {
       return View();
     }
 
-
-     [HttpPost("/vendors")]
+    [HttpPost("/vendors")]
     public ActionResult Create(string vendorName, string vendorLocation)
     {
       Vendor newVendor = new Vendor(vendorName, vendorLocation);
@@ -39,7 +39,8 @@ namespace Bakery.Controllers
       model.Add("orders", vendorOrders);
       return View(model);
     }
- [HttpPost("/vendors/{vendorId}/orders")]
+
+    [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult Create(int vendorId, string orderItem, string orderAmount, string orderPrice, string orderDate)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
@@ -54,5 +55,3 @@ namespace Bakery.Controllers
 
   }
 }
-
-

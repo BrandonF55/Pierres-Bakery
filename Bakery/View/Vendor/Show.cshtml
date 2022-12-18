@@ -8,7 +8,7 @@
 <body>
   @using Bakery.Models;
 
-  <h1> Pierre Bakery - OrderList</h1>
+  <h1> Pierre's Bakery - Order Book</h1>
  <div class="form">
       <ul>
       @foreach (Order order in @Model["orders"])
@@ -22,12 +22,12 @@
       }
       </ul>
       <a href='/vendors/@Model["vendor"].Id/orders/new'>
-      <button type="submit"> add Order</button>
+      <button type="submit"> Add TO Order Book</button>
       <a href="/vendors">
-      <button type="submit"> view vendors</button>
+      <button type="submit"> View Vendors</button>
       </a>
       <a href="/">
-      <button type="submit"> back home</button>
+      <button type="submit"> Back To Home Page</button>
       </a>
       </div>
        </body>

@@ -1,26 +1,26 @@
 using System.Collections.Generic;
-// using PierresBakery.Models
 
 namespace Bakery.Models 
 {
 
   public class Vendor
   {
-   public static List<Vendor> _instances = new List<Vendor> {};
-    string Name { get; set; }
-    string Location { get; set; }
+    private static List<Vendor> _instances = new List<Vendor> {};
+    public string Name { get; set; }
+    public string Location { get; set; }
     public int Id { get; }
-    public List <Order> Orders { get; set; }
+    public List <Order> Orders { get; set; } 
 
     public Vendor(string vendorName, string vendorLocation)
     {
       Name = vendorName;
       Location = vendorLocation;
       _instances.Add(this);
+      Id = _instances.Count;
       Orders = new List<Order>{};
     }
 
-    public static void ClearAll()
+      public static void ClearAll()
     {
       _instances.Clear();
     }
@@ -39,7 +39,6 @@ namespace Bakery.Models
     {
       Orders.Add(order);
     }
+
   }
-
-
 }
