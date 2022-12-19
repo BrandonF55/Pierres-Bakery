@@ -1,4 +1,4 @@
-# _{Pierre's Bakery}_
+# _{Pierre's Bakery Application}_
 
 #### By _Brandon James Fenk_
 
@@ -9,11 +9,13 @@
 * _C#_
 * _.NET6_
 * _MS Testing_
+* _CSHTML_
+* _CSS_
 
 
 ## Description
 
-_This is a console appication for Pierre's Bakery to calculate cost of bread and pastries purchased. It uses custom classes and auto implemented properties to create orders and output a total cost._
+_This a application for the bakery. You can type in new orders and vendors and see information on both by clicking on each item or vendor_
 
 ## Setup/Installation Requirements
 
